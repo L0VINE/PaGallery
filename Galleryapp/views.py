@@ -1,3 +1,4 @@
+from typing import NamedTuple
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404,HttpResponseRedirect
 from .models import *
@@ -14,6 +15,6 @@ def home(request):
     elif 'category' in request.GET and request.GET['category']:
         cat = request.GET.get('categories')
         images = Image.view_category(cat)
-        return render(request, 'all-images.html', {"name":name,"images":images,"cat":cat })
+        return render(request, 'all-images.html', {"name":NamedTuple,"images":images,"cat":cat })
 
     return render(request,"all-images.html",{"images":images,"location":location,"category":category})
