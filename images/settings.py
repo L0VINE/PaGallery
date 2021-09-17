@@ -10,6 +10,7 @@ import os
 import django_on_heroku
 import dj_database_url
 from decouple import config,Csv
+
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
