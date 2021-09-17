@@ -61,10 +61,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z_t%zfb22-(_uzz&ie@om_+dvi@b1!a9_q6k4@g)fe#mb^k5v#'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =True
-ALLOWED_HOSTS = ['https://pisxy.herokuapp.com/']
+#DEBUG =True
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
