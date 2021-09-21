@@ -45,15 +45,24 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 # EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# # Static files (CSS, JavaScript, Images)
+# # https://docs.djangoproject.com/en/1.9/howto/static-files/
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_URL = '/static/'
+# # Extra places for collectstatic to find static files.
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
-# Extra places for collectstatic to find static files.
+STATIC_ROOT = 'staticfiles'
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    STATIC_PATH,
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -62,7 +71,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG =True
+DEBUG =True
 #ALLOWED_HOSTS = ['*']
 
 # Application definition

@@ -2,6 +2,7 @@ asgiref==3.4.1
 beautifulsoup4==4.10.0
 confusable-homoglyphs==3.2.0
 dj-database-url==0.5.0
+dj-static==0.0.6
 Django==3.2.7
 django-bootstrap3==15.0.0
 django-bootstrap4==3.0.1
@@ -18,4 +19,5 @@ pytz==2018.5
 six==1.16.0
 soupsieve==2.2.1
 sqlparse==0.4.2
+static3==0.7.0
 whitenoise==5.3.0
